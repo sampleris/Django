@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Post
 posts = [
 
     {
@@ -14,10 +15,17 @@ posts = [
         'title': 'Blog post2',
         'content': 'second post content',
         'date_posted': 'February 28, 2023'   
+},
+{
+    'author': ' Mpara Faith',
+        'title': 'Blog post3',
+        'content': 'Third post content',
+        'date_posted': 'February 28, 2023'   
 }
 
-]
 
+]
+#Post.objects.all() is to load posts from the database
 def home(request):
     context = {
         'posts':posts
