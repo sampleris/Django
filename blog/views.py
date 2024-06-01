@@ -11,13 +11,13 @@ posts = [
 },
 {
  
-        'author': ' Mpara Carine',
+        'author': 'Carine',
         'title': 'Blog post2',
         'content': 'second post content',
         'date_posted': 'February 28, 2023'   
 },
 {
-    'author': ' Mpara Faith',
+    'author': 'Faith',
         'title': 'Blog post3',
         'content': 'Third post content',
         'date_posted': 'February 28, 2023'   
@@ -35,5 +35,8 @@ def about(request):
     return render(request, 'blog/about.html', {'title': 'About Page'})
 def bootstrap(request):
     return render(request, 'blog/' )
+def register(request):
+    return render(request, 'users/register.html')
+
 
 # Create your views here.
